@@ -12,9 +12,20 @@ namespace TDDwithBaseBallGame
 {
     public partial class Form1 : Form
     {
+        BaseBallClass baseBallObject;
         public Form1()
         {
+            baseBallObject = new BaseBallClass();
             InitializeComponent();
         }
+
+        private void BtnPlayGame_Click(object sender, EventArgs e)
+        {
+            BaseBallClass.CheckValidNumber(TbxInput.Text);
+        }
+
+
+
+
     }
 }
