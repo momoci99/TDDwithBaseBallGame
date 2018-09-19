@@ -22,6 +22,8 @@ namespace UnitTestProject1
             Assert.AreEqual(2, baseBallObject.GetStrikeCount("563", "163"));
 
             Assert.AreEqual(1, baseBallObject.GetStrikeCount("123", "156"));
+
+            Assert.AreEqual(2, baseBallObject.GetStrikeCount("123", "121"));
         }
 
 

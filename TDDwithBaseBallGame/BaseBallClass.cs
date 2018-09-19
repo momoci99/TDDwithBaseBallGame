@@ -10,10 +10,19 @@ namespace TDDwithBaseBallGame
     {
 
         private string hiddenNumber = string.Empty;
+        private int tryCount = 0;
+
+
+
 
         public BaseBallClass()
         {
             hiddenNumber = GenerateNumber().ToString();
+        }
+
+        public int GetTryCount()
+        {
+            return tryCount;
         }
 
         public string GetHiddenNumber()
@@ -21,6 +30,16 @@ namespace TDDwithBaseBallGame
             return hiddenNumber;
         }
 
+        public void IncreaseTryCount()
+        {
+            tryCount = tryCount + 1;
+        }
+
+
+        public void ResetTryCount()
+        {
+            tryCount = 0;
+        }
 
         public int GetStrikeCount(string hiddenNumber, string inputNumber)
         {
@@ -39,7 +58,11 @@ namespace TDDwithBaseBallGame
                 {
                     if (hiddenNumberArray[outerIndex].Equals(inputNumberArray[innerIndex]))
                     {
-                        strikeCount++;
+                        if(outerIndex == innerIndex)
+                        {
+                            strikeCount++;
+                        }
+                        
                     }
                 }
             }
@@ -50,16 +73,16 @@ namespace TDDwithBaseBallGame
 
         public int GetBallCount(string hiddenNumber, string inputNumber)
         {
-            
+
             char[] inputNumberArray;
 
             int ballCount = 0;
 
-            
+
             inputNumberArray = inputNumber.ToCharArray();
 
 
-            
+
             for (int innerIndex = 0; innerIndex < inputNumberArray.Length; innerIndex++)
             {
                 //숫자의 위치와 일치하는 위치가 달라야 ball Count ++
@@ -71,9 +94,9 @@ namespace TDDwithBaseBallGame
                 {
                     ballCount++;
                 }
-                
+
             }
-            
+
 
             return ballCount;
 
@@ -90,9 +113,9 @@ namespace TDDwithBaseBallGame
             inputNumberArray = inputNumber.ToCharArray();
 
 
-            for(int outerIndex = 0; outerIndex < hiddenNumberArray.Length; outerIndex++)
+            for (int outerIndex = 0; outerIndex < hiddenNumberArray.Length; outerIndex++)
             {
-                for(int innerIndex = 0; innerIndex < inputNumberArray.Length; innerIndex++)
+                for (int innerIndex = 0; innerIndex < inputNumberArray.Length; innerIndex++)
                 {
                     if (hiddenNumberArray[outerIndex].Equals(inputNumberArray[innerIndex]))
                     {
