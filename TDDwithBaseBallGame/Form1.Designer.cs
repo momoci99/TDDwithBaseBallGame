@@ -54,9 +54,9 @@
             // 
             // TbxInput
             // 
-            this.TbxInput.Location = new System.Drawing.Point(285, 14);
+            this.TbxInput.Location = new System.Drawing.Point(376, 14);
             this.TbxInput.Name = "TbxInput";
-            this.TbxInput.Size = new System.Drawing.Size(300, 21);
+            this.TbxInput.Size = new System.Drawing.Size(209, 21);
             this.TbxInput.TabIndex = 1;
             // 
             // label1
@@ -64,9 +64,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(231, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.Size = new System.Drawing.Size(139, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "하쉴?";
+            this.label1.Text = "3자리 숫자를 입력하세요";
             // 
             // label2
             // 
